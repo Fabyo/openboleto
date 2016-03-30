@@ -4,6 +4,7 @@ require '../autoloader.php';
 
 use OpenBoleto\Banco\Bradesco;
 use OpenBoleto\Agente;
+use Knp\Snappy\Pdf;
 
 $sacado = new Agente('Fernando Maia', '023.434.234-34', 'ABC 302 Bloco N', '72000-000', 'Brasília', 'DF');
 $cedente = new Agente('Empresa de cosméticos LTDA', '02.123.123/0001-11', 'CLS 403 Lj 23', '71000-000', 'Brasília', 'DF');
@@ -56,4 +57,9 @@ $boleto = new Bradesco(array(
     //'quantidade' => 1,
 ));
 
-echo $boleto->getOutput();
+$conteudo = $boleto->getOutput();
+
+$lib = getcwd() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR .'wkhtmltopdf.exe';
+
+$snappy = new Pdf($lib);
+$snappy->generateFromHtml($conteudo, 'nome.pdf');
