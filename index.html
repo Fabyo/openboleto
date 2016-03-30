@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta name="description" content="OpenBoleto : Biblioteca para geração de boletos bancários em PHP">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>OpenBoleto by kriansa</title>
+    <title>OpenBoleto</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>OpenBoleto</h1>
-        <h2>Biblioteca para geração de boletos bancários em PHP</h2>
-        <a href="https://github.com/kriansa/openboleto" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="openboleto--" class="anchor" href="#openboleto--"><span class="octicon octicon-link"></span></a>OpenBoleto <a href="http://waffle.io/kriansa/openboleto"><img src="http://badge.waffle.io/kriansa/openboleto.png" alt="Stories in Ready"></a> <a href="https://travis-ci.org/kriansa/openboleto"><img src="https://api.travis-ci.org/kriansa/openboleto.png" alt="Build Status"></a>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Fabyo/openboleto">View on GitHub</a>
+
+          <h1 id="project_title">OpenBoleto</h1>
+          <h2 id="project_tagline">Biblioteca para geração de boletos bancários em PHP</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Fabyo/openboleto/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Fabyo/openboleto/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="openboleto--" class="anchor" href="#openboleto--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OpenBoleto <a href="http://waffle.io/kriansa/openboleto"><img src="http://badge.waffle.io/kriansa/openboleto.png" alt="Stories in Ready"></a> <a href="https://travis-ci.org/kriansa/openboleto"><img src="https://api.travis-ci.org/kriansa/openboleto.png" alt="Build Status"></a>
 </h1>
 
 <p><img src="http://garajau.com.br/blog/wp-content/uploads/2013/03/boleto.png" alt="boleto"></p>
@@ -37,10 +40,10 @@
 <p>O OpenBoleto é uma biblioteca de código aberto para geração de boletos bancários, um meio de pagamento muito comum no Brasil. O foco é ser simples e ter uma arquitetura compatível com os recursos mais modernos do PHP.</p>
 
 <h2>
-<a name="instala%C3%A7%C3%A3o" class="anchor" href="#instala%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>Instalação</h2>
+<a id="instalação" class="anchor" href="#instala%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instalação</h2>
 
 <h3>
-<a name="composer" class="anchor" href="#composer"><span class="octicon octicon-link"></span></a>Composer</h3>
+<a id="composer" class="anchor" href="#composer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Composer</h3>
 
 <p>Se você já conhece o <strong>Composer</strong> (o que é extremamente recomendado), simplesmente adicione a dependência abaixo à diretiva <em>"require"</em> seu <strong>composer.json</strong>:</p>
 
@@ -48,46 +51,45 @@
 </code></pre>
 
 <h3>
-<a name="psr-0-autoloader" class="anchor" href="#psr-0-autoloader"><span class="octicon octicon-link"></span></a>PSR-0 autoloader</h3>
+<a id="psr-0-autoloader" class="anchor" href="#psr-0-autoloader" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PSR-0 autoloader</h3>
 
 <p>Hoje praticamente qualquer framework utiliza deste padrão, então você deve <a href="https://github.com/kriansa/openboleto/archive/master.zip">baixar</a> o OpenBoleto, colocar em uma pasta específica (geralmente <em>lib</em> ou <em>vendor</em>) e procurar na documentação do seu framework para fazer com que o seu autoloader aponte o namespace <strong>OpenBoleto</strong> para a pasta <strong>src</strong> do OpenBoleto.</p>
 
 <h3>
-<a name="stand-alone-library" class="anchor" href="#stand-alone-library"><span class="octicon octicon-link"></span></a>Stand-alone library</h3>
+<a id="stand-alone-library" class="anchor" href="#stand-alone-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stand-alone library</h3>
 
 <p>Se você quer simplesmente baixar e dar um include, também é muito simples. Primeiro <a href="https://github.com/kriansa/openboleto/archive/master.zip">baixe</a> (ou dê clone no repositório), e coloque em uma pasta específica. Depois, dê um include no arquivo <strong>autoloader.php</strong> e voilá!</p>
 
 <h2>
-<a name="gerando-boletos" class="anchor" href="#gerando-boletos"><span class="octicon octicon-link"></span></a>Gerando boletos</h2>
+<a id="gerando-boletos" class="anchor" href="#gerando-boletos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gerando boletos</h2>
 
 <p>Essa é a melhor parte. Não poderia ser mais simples, veja um exemplo básico:</p>
 
-<div class="highlight"><pre><span class="k">use</span> <span class="nx">OpenBoleto\Banco\BancoDoBrasil</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">OpenBoleto\Agente</span><span class="p">;</span>
-
-<span class="nv">$sacado</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Agente</span><span class="p">(</span><span class="s1">'Fernando Maia'</span><span class="p">,</span> <span class="s1">'023.434.234-34'</span><span class="p">,</span> <span class="s1">'ABC 302 Bloco N'</span><span class="p">,</span> <span class="s1">'72000-000'</span><span class="p">,</span> <span class="s1">'Brasília'</span><span class="p">,</span> <span class="s1">'DF'</span><span class="p">);</span>
-<span class="nv">$cedente</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Agente</span><span class="p">(</span><span class="s1">'Empresa de cosméticos LTDA'</span><span class="p">,</span> <span class="s1">'02.123.123/0001-11'</span><span class="p">,</span> <span class="s1">'CLS 403 Lj 23'</span><span class="p">,</span> <span class="s1">'71000-000'</span><span class="p">,</span> <span class="s1">'Brasília'</span><span class="p">,</span> <span class="s1">'DF'</span><span class="p">);</span>
-
-<span class="nv">$boleto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BancoDoBrasil</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
-    <span class="c1">// Parâmetros obrigatórios</span>
-    <span class="s1">'dataVencimento'</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">DateTime</span><span class="p">(</span><span class="s1">'2013-01-24'</span><span class="p">),</span>
-    <span class="s1">'valor'</span> <span class="o">=&gt;</span> <span class="mf">23.00</span><span class="p">,</span>
-    <span class="s1">'sequencial'</span> <span class="o">=&gt;</span> <span class="mi">1234567</span><span class="p">,</span> <span class="c1">// Para gerar o nosso número</span>
-    <span class="s1">'sacado'</span> <span class="o">=&gt;</span> <span class="nv">$sacado</span><span class="p">,</span>
-    <span class="s1">'cedente'</span> <span class="o">=&gt;</span> <span class="nv">$cedente</span><span class="p">,</span>
-    <span class="s1">'agencia'</span> <span class="o">=&gt;</span> <span class="mi">1724</span><span class="p">,</span> <span class="c1">// Até 4 dígitos</span>
-    <span class="s1">'carteira'</span> <span class="o">=&gt;</span> <span class="mi">18</span><span class="p">,</span>
-    <span class="s1">'conta'</span> <span class="o">=&gt;</span> <span class="mi">10403005</span><span class="p">,</span> <span class="c1">// Até 8 dígitos</span>
-    <span class="s1">'convenio'</span> <span class="o">=&gt;</span> <span class="mi">1234</span><span class="p">,</span> <span class="c1">// 4, 6 ou 7 dígitos</span>
-<span class="p">));</span>
-
-<span class="k">echo</span> <span class="nv">$boleto</span><span class="o">-&gt;</span><span class="na">getOutput</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">OpenBoleto\Banco\BancoDoBrasil</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">OpenBoleto\Agente</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$sacado</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Agente</span>(<span class="pl-s"><span class="pl-pds">'</span>Fernando Maia<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>023.434.234-34<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>ABC 302 Bloco N<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>72000-000<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Brasília<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>DF<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-smi">$cedente</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Agente</span>(<span class="pl-s"><span class="pl-pds">'</span>Empresa de cosméticos LTDA<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>02.123.123/0001-11<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>CLS 403 Lj 23<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>71000-000<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Brasília<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>DF<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$boleto</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">BancoDoBrasil</span>(<span class="pl-c1">array</span>(</span>
+<span class="pl-s1">    <span class="pl-c">// Parâmetros obrigatórios</span></span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>dataVencimento<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-k">new</span> <span class="pl-c1">DateTime</span>(<span class="pl-s"><span class="pl-pds">'</span>2013-01-24<span class="pl-pds">'</span></span>),</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>valor<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">23.00</span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>sequencial<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">1234567</span>, <span class="pl-c">// Para gerar o nosso número</span></span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>sacado<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$sacado</span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>cedente<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$cedente</span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>agencia<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">1724</span>, <span class="pl-c">// Até 4 dígitos</span></span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>carteira<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">18</span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>conta<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">10403005</span>, <span class="pl-c">// Até 8 dígitos</span></span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>convenio<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-c1">1234</span>, <span class="pl-c">// 4, 6 ou 7 dígitos</span></span>
+<span class="pl-s1">));</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-smi">$boleto</span><span class="pl-k">-&gt;</span>getOutput();</span></pre></div>
 
 <p>Sim, só isso! Lembre-se de que cada banco possui alguma particularidade, mas em geral são estes parâmetros os obrigatórios. Na pasta <strong>samples</strong> possui um exemplo funcional de cada banco, você pode verificar lá quais são os parâmetros necessários para cada banco.</p>
 
 <h2>
-<a name="bancos-suportados" class="anchor" href="#bancos-suportados"><span class="octicon octicon-link"></span></a>Bancos suportados</h2>
+<a id="bancos-suportados" class="anchor" href="#bancos-suportados" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bancos suportados</h2>
 
 <p>Atualmente o OpenBoleto funciona com os bancos abaixo:</p>
 
@@ -98,34 +100,28 @@
 <li>Itaú</li>
 <li>Santander</li>
 <li>Unicred</li>
-</ul><p>Toda contribuição é bem vinda. Se você deseja adaptar o OpenBoleto a algum outro banco, fique à vontade para explorar o código, veja como é bastante simples integrar qualquer banco à biblioteca.</p>
+</ul>
+
+<p>Toda contribuição é bem vinda. Se você deseja adaptar o OpenBoleto a algum outro banco, fique à vontade para explorar o código, veja como é bastante simples integrar qualquer banco à biblioteca.</p>
 
 <h2>
-<a name="licen%C3%A7a" class="anchor" href="#licen%C3%A7a"><span class="octicon octicon-link"></span></a>Licença</h2>
+<a id="licença" class="anchor" href="#licen%C3%A7a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licença</h2>
 
 <ul>
 <li>MIT License</li>
 </ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/kriansa/openboleto/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/kriansa/openboleto/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/kriansa/openboleto"></a> is maintained by <a href="https://github.com/kriansa">kriansa</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-            <script type="text/javascript">
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">OpenBoleto maintained by <a href="https://github.com/Fabyo">Fabyo</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -135,6 +131,7 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
