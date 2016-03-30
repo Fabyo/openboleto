@@ -30,7 +30,6 @@ $sacado = new Agente('Fernando Maia', '023.434.234-34', 'ABC 302 Bloco N', '7200
 $cedente = new Agente('Empresa de cosméticos LTDA', '02.123.123/0001-11', 'CLS 403 Lj 23', '71000-000', 'Brasília', 'DF');
  
 $boleto = new BancoDoBrasil(array(
-    // Parâmetros obrigatórios
     'dataVencimento' => new DateTime('2013-01-24'),
     'valor' => 23.00,
     'sequencial' => 1234567, // Para gerar o nosso número
