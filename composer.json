@@ -1,9 +1,9 @@
 {
-    "name": "Fabyo/openboleto",
+    "name": "fabyo/openboleto",
     "type": "library",
     "description": "Biblioteca para geração de boletos bancários.",
     "keywords": ["boleto", "boleto bancario"],
-    "homepage": "http://github.com/Fabyo/openboleto",
+    "homepage": "http://github.com/fabyo/openboleto",
     "license": "MIT",
     "authors": [
         {
