@@ -1,14 +1,14 @@
 {
-    "name": "kriansa/openboleto",
+    "name": "Fabyo/openboleto",
     "type": "library",
     "description": "Biblioteca para geração de boletos bancários.",
     "keywords": ["boleto", "boleto bancario"],
-    "homepage": "http://github.com/kriansa/openboleto",
+    "homepage": "http://github.com/Fabyo/openboleto",
     "license": "MIT",
     "authors": [
         {
-            "name": "Daniel Garajau",
-            "email": "kriansa@facebook.com"
+            "name": "Fabyo Guimaraes Garajau",
+            "email": "fabyo.php@gmail.com"
         }
     ],
     "require": {
