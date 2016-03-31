@@ -1,4 +1,4 @@
-# OpenBoleto [![Stories in Ready](http://badge.waffle.io/kriansa/openboleto.png)](http://waffle.io/kriansa/openboleto) [![Build Status](https://api.travis-ci.org/kriansa/openboleto.png)](https://travis-ci.org/kriansa/openboleto) 
+# OpenBoleto 
 
 O OpenBoleto é uma biblioteca de código aberto para geração de boletos bancários, um meio de pagamento muito comum no Brasil. O foco é ser simples e ter uma arquitetura compatível com os recursos mais modernos do PHP.
 
@@ -8,12 +8,6 @@ Se você já conhece o **Composer** (o que é extremamente recomendado), simples
 ```
 "fabyo/openboleto": "v1.2"
 ```
-###PSR-0 autoloader
-Hoje praticamente qualquer framework utiliza deste padrão, então você deve [baixar](https://github.com/kriansa/openboleto/archive/master.zip) o OpenBoleto, colocar em uma pasta específica (geralmente *lib* ou *vendor*) e procurar na documentação do seu framework para fazer com que o seu autoloader aponte o namespace **OpenBoleto** para a pasta **src** do OpenBoleto.
-
-###Stand-alone library
-Se você quer simplesmente baixar e dar um include, também é muito simples. Primeiro [baixe](https://github.com/kriansa/openboleto/archive/master.zip) (ou dê clone no repositório), e coloque em uma pasta específica. Depois, dê um include no arquivo **autoloader.php** e voilá!
-
 ## Gerando boletos
 Essa é a melhor parte. Não poderia ser mais simples, veja um exemplo básico:
 ```php
